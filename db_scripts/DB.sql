@@ -86,13 +86,17 @@ BEGIN
   DECLARE dtFrom      DATE;
   DECLARE dtTo        DATE;
   DECLARE totalPoints INT;
-  SET dtFrom = CONCAT(YEAR(dateInMonth),'-',MONTH(dateInMonth),'-01');
-  SET dtTo = DATE_ADD(dtFrom, INTERVAL 1 MONTH);
-  SELECT TRUNCATE(SUM(total)/10,0) + TRUNCATE(COUNT(*)/10,0)
-    INTO totalPoints
-    FROM purchase_history
-    WHERE purchase_date>=dtFrom AND purchase_date<dtTo;
-  RETURN totalPoints;
+  IF (dateInMonth < '2022-01-01') THEN
+    RETURN 0;
+  ELSE
+    SET dtFrom = CONCAT(YEAR(dateInMonth),'-',MONTH(dateInMonth),'-01');
+    SET dtTo = DATE_ADD(dtFrom, INTERVAL 1 MONTH);
+    SELECT TRUNCATE(SUM(total)/10,0) + TRUNCATE(COUNT(*)/10,0)
+      INTO totalPoints
+      FROM purchase_history
+      WHERE purchase_date>=dtFrom AND purchase_date<dtTo;
+    RETURN totalPoints;
+  END IF;
 END $$
 DELIMITER ;
 COMMIT;
