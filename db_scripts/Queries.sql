@@ -5,7 +5,7 @@ WHERE customer_id=xxx AND purchase_date>='2022-01-01';
 
 -- Get data by month
 SELECT
-  CONCAT(MONTHNAME(purchase_date),' ',YEAR(purchase_date)) "Month",
+  DATE_FORMAT(purchase_date,'%Y-%m') "Month",
   COUNT(DISTINCT customer_id) "Num Customers",
   COUNT(id) "Num Purchases",
   CONCAT('$',SUM(total)) "Total Spent",
