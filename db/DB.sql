@@ -38,7 +38,7 @@ GRANT ALL ON pf_crm.* TO pf_role;
 CREATE USER pf_user IDENTIFIED BY 'pf_user' DEFAULT ROLE pf_role PASSWORD EXPIRE NEVER;
 
 -- --------------------------------------------------------------------------------------
--- Set configuration options
+-- Set Configuration Options
 -- --------------------------------------------------------------------------------------
 SET GLOBAL sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));
 SET PERSIST sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));

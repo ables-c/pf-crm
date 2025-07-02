@@ -1,4 +1,5 @@
 <?php
+// Customer class; Uses database view v_customer (includes loyalty points)
 class Customer {
     public $id;
     public $name;

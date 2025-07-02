@@ -1,5 +1,6 @@
 <?php
 // views/customers.php
+// Show and filter customers web view
 require_once 'Customer.php';
 
 $filter_sql = "SELECT * FROM v_customers WHERE 1";

@@ -1,4 +1,6 @@
 <?php
+// Validation and data handling functions
+
 function validateCustomer($name, $email, $phone, $created_at) {
     if (!preg_match('/^[A-Za-z ]+$/', $name)) return false;
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) return false;

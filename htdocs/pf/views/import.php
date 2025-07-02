@@ -1,5 +1,7 @@
 <?php
 // views/import.php
+// The web view to import customer and purchase history CSV files.
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_FILES['customers_csv']) && $_FILES['customers_csv']['error'] === UPLOAD_ERR_OK) {
         $file = fopen($_FILES['customers_csv']['tmp_name'], 'r');

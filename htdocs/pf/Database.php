@@ -1,4 +1,6 @@
 <?php
+// Database connector
+// Parameter values are specified in 'config.php' file
 class Database {
     private $conn;
 

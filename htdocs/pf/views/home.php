@@ -1,5 +1,6 @@
 <?php
 // views/home.php
+// Main dashboard/landing page with basic tasks
 ?>
 <h2>Platinum Fundraising - CRM System</h2>
 <ul>

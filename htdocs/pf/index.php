@@ -1,11 +1,12 @@
 <?php
-// index.php - Entry point for the CRM system
+// index.php - Entry point, routes everything
 
 require_once 'config.php';
 require_once 'Customer.php';
 require_once 'Database.php';
 require_once 'functions.php';
 
+// Connect to the database
 $db = new Database();
 $conn = $db->getConnection();
 
