@@ -24,3 +24,8 @@ CONTENTS
   ./htdocs/pf/views/customers.php :: Show and filter customers web view
   ./htdocs/pf/views/report.php    :: Monthly report web view
   ./htdocs/pf/views/home.php      :: Main dashboard/landing page
+
+SOFTWARE VERSIONS
+  Apache HTTPD 2.4.63
+  PHP 8.4.10
+  MySQL 8.0.42
