@@ -13,6 +13,7 @@ DEPLOYMENT INSTRUCTIONS
 CONTENTS
   ./config/apache/httpd.conf      :: Apache configuration file (changes from default)
   ./config/php/php.ini            :: PHP configuration file (changes from default)
+  ./data files/                   :: Contains the CSV data files that were provided
   ./db/DB.sql                     :: Database master script
   ./htdocs/pf/                    :: Contains the web application
   ./htdocs/pf/index.php           :: Routes everything
