@@ -1,6 +1,5 @@
 <?php
 // views/customers.php
-// Show and filter customers web view
 require_once 'Customer.php';
 
 $filter_sql = "SELECT * FROM v_customers WHERE 1";
@@ -33,16 +32,16 @@ while ($row = $stmt->fetch()) {
     <input type="submit" value="Filter">
 </form>
 
-<table border="1" cellpadding="5">
+<table border="1" cellspacing="0" cellpadding="4">
     <tr><th>ID</th><th>Name</th><th>Email</th><th>Phone</th><th>Created At</th><th>Loyalty Points</th></tr>
     <?php foreach ($customers as $cust): ?>
         <tr>
-            <td><?= htmlspecialchars($cust->id) ?></td>
-            <td><?= htmlspecialchars($cust->name) ?></td>
-            <td><?= htmlspecialchars($cust->email) ?></td>
-            <td><?= htmlspecialchars($cust->phone_number) ?></td>
-            <td><?= htmlspecialchars($cust->created_at) ?></td>
-            <td><?= htmlspecialchars($cust->loyalty_points) ?></td>
+            <td align="center"><?= htmlspecialchars($cust->id) ?></td>
+            <td align="left"><?= htmlspecialchars($cust->name) ?></td>
+            <td align="left"><?= htmlspecialchars($cust->email) ?></td>
+            <td align="center"><?= htmlspecialchars($cust->phone_number) ?></td>
+            <td align="center"><?= htmlspecialchars($cust->created_at) ?></td>
+            <td align="center"><?= htmlspecialchars($cust->loyalty_points) ?></td>
         </tr>
     <?php endforeach; ?>
 </table>
