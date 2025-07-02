@@ -8,7 +8,8 @@ function validateCustomer($name, $email, $phone, $created_at) {
 }
 
 function sanitizeCustomer($name, $email) {
-    $name = filter_var($name, FILTER_SANITIZE_STRING);
+    // FILTER_SANITIZE_STRING has been deprecated
+    // $name = filter_var($name, FILTER_SANITIZE_STRING);
     $email = strtolower(trim($email));
     return [$name, $email];
 }

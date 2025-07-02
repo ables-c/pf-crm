@@ -121,8 +121,8 @@ COMMIT;
 CREATE OR REPLACE VIEW v_monthly_report AS
   SELECT
     DATE_FORMAT(purchase_date,'%Y-%m') "Month",
-    COUNT(DISTINCT customer_id) "NumCustomers",
-    COUNT(id) "NumPurchases",
+    -- COUNT(DISTINCT customer_id) "NumCustomers",
+    -- COUNT(id) "NumPurchases",
     CONCAT('$',SUM(total)) "TotalSpent",
     CONCAT('$',ROUND(SUM(total)/COUNT(DISTINCT customer_id),2)) "AvgPerCustomer",
     getLoyaltyPointsMonth(purchase_date) "LoyaltyPoints"
