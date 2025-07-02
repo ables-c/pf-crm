@@ -11,8 +11,8 @@ DEPLOYMENT INSTRUCTIONS
   4. Open a browser, then navigate to "http://localhost/pf".  If "index.php" has not been specified for DirectoryIndex index, you'll need to use "http://localhost/pf/index.php" instead.
 
 CONTENTS
-  ./config/apache/httpd.conf      :: Apache configuration file (review config, if desired/necessary)
-  ./config/php/php.ini            :: PHP configuration file (review config, if desired/necessary)
+  ./config/apache/httpd.conf      :: Apache configuration file (changes from default)
+  ./config/php/php.ini            :: PHP configuration file (changes from default)
   ./db/DB.sql                     :: Database master script
   ./htdocs/pf/                    :: Contains the web application
   ./htdocs/pf/index.php           :: Routes everything

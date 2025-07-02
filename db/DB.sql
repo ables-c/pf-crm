@@ -110,7 +110,7 @@ CREATE OR REPLACE VIEW v_customers AS
     name,
     email,
     phone_number,
-    created_at,
+    DATE_FORMAT(created_at,'%Y-%m-%d') created_at,
     getLoyaltyPointsCustomer(id) loyalty_points
   FROM customers;
 COMMIT;
