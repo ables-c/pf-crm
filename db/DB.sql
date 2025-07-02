@@ -34,7 +34,7 @@ CREATE TABLE purchase_history (
 -- Create Role & User
 -- --------------------------------------------------------------------------------------
 CREATE ROLE pf_role;
-GRANT ALL ON pf_cfm.* TO pf_role;
+GRANT ALL ON pf_crm.* TO pf_role;
 CREATE USER pf_user IDENTIFIED BY 'pf_user' DEFAULT ROLE pf_role PASSWORD EXPIRE NEVER;
 
 -- --------------------------------------------------------------------------------------
