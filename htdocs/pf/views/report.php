@@ -1,5 +1,6 @@
 <?php
 // views/report.php
+// Query the custom view, retrieving the columns for report
 $sql = "SELECT Month, TotalSpent, AvgPerCustomer, LoyaltyPoints FROM v_monthly_report";
 $results = $conn->query($sql)->fetchAll();
 ?>

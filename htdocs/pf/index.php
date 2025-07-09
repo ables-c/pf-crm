@@ -11,8 +11,10 @@ $db = new Database();
 $conn = $db->getConnection();
 
 // Basic Routing
+// Get value of 'page' argument; use 'home' if null
 $page = $_GET['page'] ?? 'home';
 
+// Include the contents of the desired view file
 switch ($page) {
     case 'import':
         include 'views/import.php';

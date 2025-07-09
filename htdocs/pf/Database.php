@@ -5,6 +5,7 @@ class Database {
     private $conn;
 
     public function __construct() {
+        // PDO class represents connection between PHP and database server
         $dsn = 'mysql:host=' . DB_HOST . ';port=' . DB_PORT . ';dbname=' . DB_NAME;
         $options = [
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,

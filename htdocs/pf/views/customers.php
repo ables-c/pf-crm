@@ -2,9 +2,11 @@
 // views/customers.php
 require_once 'Customer.php';
 
+// Create query of customers that includes loyalty points
 $filter_sql = "SELECT * FROM v_customers WHERE 1";
 $params = [];
 
+// Add filters, if applicable
 if (!empty($_GET['start_date']) && !empty($_GET['end_date'])) {
     $filter_sql .= " AND created_at BETWEEN ? AND ?";
     $params[] = $_GET['start_date'];
@@ -15,8 +17,10 @@ if (!empty($_GET['min_spending'])) {
     $params[] = $_GET['min_spending'];
 }
 
+// Execute the query
 $stmt = $conn->prepare($filter_sql);
 $stmt->execute($params);
+// Define customers array for query results
 $customers = [];
 while ($row = $stmt->fetch()) {
     $customers[] = new Customer($row);
